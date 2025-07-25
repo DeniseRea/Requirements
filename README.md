@@ -177,17 +177,10 @@ npm run clean        # Limpia archivos de build
 
 Este proyecto está licenciado bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
 
-## 📧 Soporte y Contacto
-
-- **Issues**: [GitHub Issues](https://github.com/DeniseRea/Requirements/issues)
-- **Documentación**: [Wiki del Proyecto](https://github.com/DeniseRea/Requirements/wiki)
-- **Email**: soporte@faesign.com
-
----
 
 <div align="center">
   <strong>Desarrollado con ❤️ para la gestión segura de firma electrónica avanzada</strong>
   <br>
   <sub>FAESign © 2025 - Todos los derechos reservados</sub>
-</div>+ Vite
+</div>
 
