@@ -4,7 +4,7 @@ import Dashboard from '../../pages/Dashboard';
 import CreadorDashboard from '../../pages/CreadorDashboard';
 import FirmanteDashboard from '../../pages/FirmanteDashboard';
 import AdminDashboard from '../../pages/AdminDashboard';
-// import AuditorDashboard from '../../pages/AuditorDashboard';
+import AuditorDashboard from '../../pages/AuditorDashboard';
 
 export default function AppRoutes() {
   return (
@@ -15,7 +15,7 @@ export default function AppRoutes() {
         <Route path="/creador" element={<CreadorDashboard />} />
         <Route path="/firmante" element={<FirmanteDashboard />} />
         <Route path="/administrador" element={<AdminDashboard />} />
-        {/* <Route path="/auditor" element={<AuditorDashboard />} /> */}
+        <Route path="/auditor" element={<AuditorDashboard />} /> 
       </Routes>
     </BrowserRouter>
   );

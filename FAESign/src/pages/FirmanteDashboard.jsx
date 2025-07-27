@@ -557,27 +557,29 @@ export default function FirmanteDashboard() {
   );
 
   return (
-    <div className="firmante-dashboard">
-      <header className="dashboard-header">
-        <div className="header-content">
-          <div className="header-left">
-            <h1>
-              <i className="fas fa-user-check"></i>
-              Panel del Firmante - FAE
-            </h1>
-            <span className="user-info">
-              <i className="fas fa-user"></i>
-              {userEmail}
-            </span>
-          </div>
-          <div className="header-actions">
-            <div className="notifications-dropdown">
-              <button 
-                className="notification-icon" 
-                onClick={() => setShowNotifications(!showNotifications)}
-                title="Notificaciones"
-              >
-                <i className="fas fa-bell"></i>
+    <div className="dashboard-layout">
+      <div className="dashboard-container">
+        <div className="firmante-dashboard">
+          <header className="dashboard-header">
+            <div className="header-content">
+              <div className="header-left">
+                <h1>
+                  <i className="fas fa-user-check"></i>
+                  Panel del Firmante - FAE
+                </h1>
+                <span className="user-info">
+                  <i className="fas fa-user"></i>
+                  {userEmail}
+                </span>
+              </div>
+              <div className="header-actions">
+                <div className="notifications-dropdown">
+                  <button 
+                    className="notification-icon" 
+                    onClick={() => setShowNotifications(!showNotifications)}
+                    title="Notificaciones"
+                  >
+                    <i className="fas fa-bell"></i>
                 {getUnreadNotificationsCount() > 0 && (
                   <span className="notification-count">{getUnreadNotificationsCount()}</span>
                 )}
@@ -656,6 +658,8 @@ export default function FirmanteDashboard() {
         {currentView === 'history' && renderHistoryView()}
         {currentView === 'preview' && renderPreviewView()}
       </main>
+        </div>
+      </div>
     </div>
   );
 }

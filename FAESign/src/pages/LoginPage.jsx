@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Carousel from 'react-bootstrap/Carousel';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './LoginPage.css';
 
 export default function LoginPage() {
@@ -120,36 +122,37 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="login-container">
-      <div className="login-card">
-        <div className="login-header">
-          <h1>FAESign</h1>
-          <p>Sistema de Firma Electrónica Avanzada</p>
-        </div>
-
-        {/* Información de roles */}
-        <div className="role-info">
-          <p>
-            <strong>Accesos de prueba:</strong>
-            <br />
-            • <strong>creador@fae.ec</strong> - Crear y gestionar documentos
-            <br />
-            • <strong>firmante@fae.ec</strong> - Firmar documentos asignados
-            <br />
-            • <strong>administrador@fae.ec</strong> - Gestión del sistema
-            <br />
-            • <strong>auditor@fae.ec</strong> - Trazabilidad y reportes
-            <br />
-            <small>Los Firmantes no pueden recuperar códigos de acceso</small>
-          </p>
-        </div>
-
-        {/* Mensajes de estado */}
-        {message && (
-          <div className={messageType === 'error' ? 'error-message' : 'success-message'}>
-            {message}
+    <div className="login-page">
+      <div className="login-left">
+        <div className="login-card">
+          <div className="login-header">
+            <h1>FAESign</h1>
+            <p>Sistema de Firma Electrónica Avanzada</p>
           </div>
-        )}
+
+          {/* Información de roles */}
+          <div className="role-info">
+            <p>
+              <strong>Accesos de prueba:</strong>
+              <br />
+              • <strong>creador@fae.ec</strong> - Crear y gestionar documentos
+              <br />
+              • <strong>firmante@fae.ec</strong> - Firmar documentos asignados
+              <br />
+              • <strong>administrador@fae.ec</strong> - Gestión del sistema
+              <br />
+              • <strong>auditor@fae.ec</strong> - Trazabilidad y reportes
+              <br />
+              <small>Los Firmantes no pueden recuperar códigos de acceso</small>
+            </p>
+          </div>
+
+          {/* Mensajes de estado */}
+          {message && (
+            <div className={messageType === 'error' ? 'error-message' : 'success-message'}>
+              {message}
+            </div>
+          )}
         
         <form onSubmit={handleSubmit} className="login-form">
           <div className="form-group">
@@ -226,10 +229,46 @@ export default function LoginPage() {
           )}
         </div>
 
-        <div className="login-footer">
-          <p style={{ fontSize: '12px', color: '#666666', textAlign: 'center', margin: 0 }}>
-            Token JWT válido por 8 horas • Auditoría completa de accesos
-          </p>
+          <div className="login-footer">
+            <p style={{ fontSize: '12px', color: '#666666', textAlign: 'center', margin: 0 }}>
+              Token JWT válido por 8 horas • Auditoría completa de accesos
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div className="login-right">
+        <div className="carousel-container">
+          <Carousel interval={3000} controls={false} indicators={true} fade>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="/assets/images/FAE1.jpeg"
+                alt="Fuerzas Armadas del Ecuador 1"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="/assets/images/FAE2.jpg"
+                alt="Fuerzas Armadas del Ecuador 2"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="/assets/images/FAE3.jpg"
+                alt="Fuerzas Armadas del Ecuador 3"
+              />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="/assets/images/FAE4.jpg"
+                alt="Fuerzas Armadas del Ecuador 4"
+              />
+            </Carousel.Item>
+          </Carousel>
         </div>
       </div>
     </div>

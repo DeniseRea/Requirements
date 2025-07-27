@@ -262,22 +262,24 @@ const AdminDashboard = () => {
   ];
 
   return (
-    <div className="admin-dashboard">
-      {/* Header */}
-      <header className="admin-header">
-        <div className="header-left">
-          <h1>
-            <i className="fas fa-shield-alt"></i>
-            Panel de Administración FAE-Sign
-          </h1>
-          <span className="admin-badge">Administrador</span>
-        </div>
-        
-        <div className="header-right">
-          {/* Notificaciones */}
-          <div className="notifications-container" ref={notificationRef}>
-            <button 
-              className="notification-btn"
+    <div className="dashboard-layout">
+      <div className="dashboard-container">
+        <div className="admin-dashboard">
+          {/* Header */}
+          <header className="admin-header">
+            <div className="header-left">
+              <h1>
+                <i className="fas fa-shield-alt"></i>
+                Panel de Administración FAE-Sign
+              </h1>
+              <span className="admin-badge">Administrador</span>
+            </div>
+            
+            <div className="header-right">
+              {/* Notificaciones */}
+              <div className="notifications-container" ref={notificationRef}>
+                <button 
+                  className="notification-btn"
               onClick={() => setShowNotifications(!showNotifications)}
             >
               <i className="fas fa-bell"></i>
@@ -811,6 +813,8 @@ const AdminDashboard = () => {
           </div>
         )}
       </main>
+        </div>
+      </div>
     </div>
   );
 };
