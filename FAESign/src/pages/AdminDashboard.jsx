@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import './AdminDashboard.css';
 
@@ -13,6 +14,7 @@ const AdminDashboard = () => {
   const [systemConfig, setSystemConfig] = useState({});
   
   const notificationRef = useRef(null);
+  const navigate = useNavigate();
 
   // Datos mock para el dashboard
   useEffect(() => {
@@ -134,6 +136,11 @@ const AdminDashboard = () => {
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
+
+  const logout = () => {
+    localStorage.clear();
+    navigate('/');
+  };
 
   // Funciones de gestión de usuarios
   const handleUserAction = (userId, action) => {
@@ -325,6 +332,11 @@ const AdminDashboard = () => {
               </div>
             )}
           </div>
+          
+          <button className="btn-secondary" onClick={logout}>
+            <i className="fas fa-sign-out-alt"></i>
+            Cerrar Sesión
+          </button>
           
           <div className="user-info">
             <span>Admin FAE</span>

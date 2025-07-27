@@ -1,3 +1,5 @@
+@import '../styles/globals.css';
+
 /* AuditorDashboard.css */
 
 /* Variables CSS heredan del root */
@@ -21,15 +23,15 @@
 /* Estilos generales */
 .auditor-dashboard {
   min-height: 100vh;
-  background: var(--light-bg);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--surface-background);
+  font-family: var(--font-family);
 }
 
 /* Header */
 .auditor-header {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: var(--primary-gradient);
   color: var(--white);
-  padding: 1rem 2rem;
+  padding: var(--spacing-lg) var(--spacing-lg);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,6 +39,12 @@
   position: sticky;
   top: 0;
   z-index: 90;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .header-left h1 {
@@ -54,7 +62,27 @@
   border-radius: 20px;
   font-size: 0.875rem;
   font-weight: 500;
-  margin-left: 1rem;
+  margin-top: 0.25rem;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
 }
 
 .header-right .user-info {

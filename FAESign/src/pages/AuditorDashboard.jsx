@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import './AuditorDashboard.css'; 
 
 const AuditorDashboard = () => {
   const [activeTab, setActiveTab] = useState('logs');
+  const navigate = useNavigate();
 
   const auditLogs = [
     {
@@ -33,6 +35,11 @@ const AuditorDashboard = () => {
     { title: 'Sesiones Activas', value: 14, trend: '+3%' }
   ];
 
+  const logout = () => {
+    localStorage.clear();
+    navigate('/');
+  };
+
   const exportData = (type) => {
     Swal.fire({
       title: 'Exportando...',
@@ -57,8 +64,14 @@ const AuditorDashboard = () => {
   return (
     <div className="auditor-dashboard">
       <header className="auditor-header">
-        <h1><i className="fas fa-user-secret"></i> Panel del Auditor FAE-Sign</h1>
-        <span className="auditor-badge">Auditor</span>
+        <div className="header-left">
+          <h1><i className="fas fa-user-secret"></i> Panel del Auditor FAE-Sign</h1>
+          <span className="auditor-badge">Auditor</span>
+        </div>
+        <button className="btn-secondary" onClick={logout}>
+          <i className="fas fa-sign-out-alt"></i>
+          Cerrar Sesión
+        </button>
       </header>
 
       <nav className="auditor-nav">
