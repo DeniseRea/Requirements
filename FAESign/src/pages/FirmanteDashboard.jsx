@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import './FirmanteDashboard.css';
@@ -11,32 +11,37 @@ export default function FirmanteDashboard() {
   const [dateFilter, setDateFilter] = useState('all');
   const [showNotifications, setShowNotifications] = useState(false);
   
+  const notificationRef = useRef(null);
+  
   const [notifications, setNotifications] = useState([
     { 
       id: 1, 
-      tipo: 'firma_pendiente', 
-      titulo: 'Nuevo documento para firmar',
-      mensaje: 'Contrato_Servicios_2024.pdf requiere su firma',
-      fecha: '2024-01-15 10:30',
-      leido: false,
+      type: 'firma_pendiente', 
+      title: 'Nuevo documento para firmar',
+      message: 'Contrato_Servicios_2024.pdf requiere su firma',
+      time: '2 min',
+      isRead: false,
+      priority: 'high',
       docId: 1
     },
     { 
       id: 2, 
-      tipo: 'recordatorio', 
-      titulo: 'Recordatorio de vencimiento',
-      mensaje: 'El documento Acuerdo_Confidencialidad.pdf vence mañana',
-      fecha: '2024-01-14 15:00',
-      leido: false,
+      type: 'recordatorio', 
+      title: 'Recordatorio de vencimiento',
+      message: 'El documento Acuerdo_Confidencialidad.pdf vence mañana',
+      time: '15 min',
+      isRead: false,
+      priority: 'medium',
       docId: 2
     },
     { 
       id: 3, 
-      tipo: 'sistema', 
-      titulo: 'Actualización del sistema',
-      mensaje: 'Nueva versión de FAESign disponible',
-      fecha: '2024-01-13 09:00',
-      leido: true
+      type: 'sistema', 
+      title: 'Actualización del sistema',
+      message: 'Nueva versión de FAESign disponible',
+      time: '1 hora',
+      isRead: true,
+      priority: 'low'
     }
   ]);
   
@@ -110,7 +115,7 @@ export default function FirmanteDashboard() {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (showNotifications && !event.target.closest('.notifications-dropdown')) {
+      if (showNotifications && notificationRef.current && !notificationRef.current.contains(event.target)) {
         setShowNotifications(false);
       }
     };
@@ -129,13 +134,13 @@ export default function FirmanteDashboard() {
   const markNotificationAsRead = (notificationId) => {
     setNotifications(prev => 
       prev.map(notif => 
-        notif.id === notificationId ? { ...notif, leido: true } : notif
+        notif.id === notificationId ? { ...notif, isRead: true } : notif
       )
     );
   };
 
   const getUnreadNotificationsCount = () => {
-    return notifications.filter(notif => !notif.leido).length;
+    return notifications.filter(notif => !notif.isRead).length;
   };
 
   const handleSignDocument = (docId) => {
@@ -572,86 +577,80 @@ export default function FirmanteDashboard() {
                   {userEmail}
                 </span>
               </div>
-              <div className="header-actions">
-                <div className="notifications-dropdown">
+              <div className="header-right">
+                {/* Notificaciones */}
+                <div className="notifications-container" ref={notificationRef}>
                   <button 
-                    className="notification-icon" 
+                    className="notification-btn"
                     onClick={() => setShowNotifications(!showNotifications)}
-                    title="Notificaciones"
                   >
                     <i className="fas fa-bell"></i>
-                {getUnreadNotificationsCount() > 0 && (
-                  <span className="notification-count">{getUnreadNotificationsCount()}</span>
-                )}
-              </button>
-              
-              {showNotifications && (
-                <div className="notifications-dropdown-menu">
-                  <div className="notifications-dropdown-header">
-                    <h3>Notificaciones</h3>
                     {getUnreadNotificationsCount() > 0 && (
-                      <button 
-                        className="mark-all-read-btn-small"
-                        onClick={() => setNotifications(prev => prev.map(notif => ({ ...notif, leido: true })))}
-                        title="Marcar todas como leídas"
-                      >
-                        <i className="fas fa-check-double"></i>
-                      </button>
+                      <span className="notification-badge">{getUnreadNotificationsCount()}</span>
                     )}
-                  </div>
+                  </button>
                   
-                  <div className="notifications-dropdown-list">
-                    {notifications.length === 0 ? (
-                      <div className="no-notifications-small">
-                        <i className="fas fa-bell-slash"></i>
-                        <p>No hay notificaciones</p>
-                      </div>
-                    ) : (
-                      notifications.map(notification => (
-                        <div 
-                          key={notification.id} 
-                          className={`notification-item-small ${!notification.leido ? 'unread' : ''}`}
-                          onClick={() => {
-                            markNotificationAsRead(notification.id);
-                            setShowNotifications(false);
-                            if (notification.tipo === 'firma_pendiente' && notification.docId) {
-                              const doc = pendingDocs.find(d => d.id === notification.docId);
-                              if (doc) {
-                                previewDocument(doc);
-                              }
-                            }
-                          }}
+                  {showNotifications && (
+                    <div className="notifications-dropdown">
+                      <div className="notifications-header">
+                        <h3>Notificaciones</h3>
+                        <button 
+                          className="mark-all-read"
+                          onClick={() => setNotifications(prev => prev.map(notif => ({ ...notif, isRead: true })))}
                         >
-                          <div className={`notification-icon-small ${notification.tipo}`}>
-                            <i className={`fas ${
-                              notification.tipo === 'firma_pendiente' ? 'fa-pen' :
-                              notification.tipo === 'recordatorio' ? 'fa-exclamation-triangle' :
-                              'fa-info-circle'
-                            }`}></i>
+                          Marcar todas como leídas
+                        </button>
+                      </div>
+                      
+                      <div className="notifications-list">
+                        {notifications.length === 0 ? (
+                          <div className="no-notifications">
+                            <i className="fas fa-bell-slash"></i>
+                            <p>No hay notificaciones</p>
                           </div>
-                          <div className="notification-content-small">
-                            <h4>{notification.titulo}</h4>
-                            <p>{notification.mensaje}</p>
-                            <span className="notification-date-small">
-                              {notification.fecha}
-                            </span>
-                          </div>
-                          {!notification.leido && <div className="unread-indicator-small"></div>}
-                        </div>
-                      ))
-                    )}
-                  </div>
+                        ) : (
+                          notifications.map(notification => (
+                            <div 
+                              key={notification.id} 
+                              className={`notification-item ${!notification.isRead ? 'unread' : ''} priority-${notification.priority}`}
+                              onClick={() => {
+                                markNotificationAsRead(notification.id);
+                                setShowNotifications(false);
+                                if (notification.type === 'firma_pendiente' && notification.docId) {
+                                  const doc = pendingDocs.find(d => d.id === notification.docId);
+                                  if (doc) {
+                                    previewDocument(doc);
+                                  }
+                                }
+                              }}
+                            >
+                              <div className="notification-icon">
+                                <i className={`fas ${
+                                  notification.type === 'firma_pendiente' ? 'fa-pen' :
+                                  notification.type === 'recordatorio' ? 'fa-exclamation-triangle' :
+                                  'fa-info-circle'
+                                }`}></i>
+                              </div>
+                              <div className="notification-content">
+                                <h4>{notification.title}</h4>
+                                <p>{notification.message}</p>
+                                <span className="notification-time">{notification.time}</span>
+                              </div>
+                            </div>
+                          ))
+                        )}
+                      </div>
+                    </div>
+                  )}
                 </div>
-              )}
+                
+                <button className="btn-secondary" onClick={logout}>
+                  <i className="fas fa-sign-out-alt"></i>
+                  Cerrar Sesión
+                </button>
+              </div>
             </div>
-            
-            <button className="btn-secondary" onClick={logout}>
-              <i className="fas fa-sign-out-alt"></i>
-              Cerrar Sesión
-            </button>
-          </div>
-        </div>
-      </header>
+          </header>
 
       <main className="dashboard-main">
         {currentView === 'dashboard' && renderDashboard()}
