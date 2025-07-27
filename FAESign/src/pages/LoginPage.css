@@ -150,6 +150,29 @@
   font-style: italic;
 }
 
+/* Logo institucional */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-lg);
+}
+
+.fae-logo {
+  max-width: 200px;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  transition: all var(--transition-base);
+}
+
+.fae-logo:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+}
+
 /* Formulario de login */
 .login-form {
   display: flex;
@@ -416,6 +439,15 @@
     font-size: var(--font-size-xl);
   }
   
+  .logo-container {
+    padding: var(--spacing-md);
+  }
+  
+  .fae-logo {
+    max-width: 100px;
+    max-height: 100px;
+  }
+  
   .role-info {
     font-size: var(--font-size-xs);
     padding: var(--spacing-md);
@@ -443,6 +475,15 @@
   
   .login-header p {
     font-size: var(--font-size-xs);
+  }
+  
+  .logo-container {
+    padding: var(--spacing-sm);
+  }
+  
+  .fae-logo {
+    max-width: 80px;
+    max-height: 80px;
   }
   
   .role-info {

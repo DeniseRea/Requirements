@@ -130,21 +130,13 @@ export default function LoginPage() {
             <p>Sistema de Firma Electrónica Avanzada</p>
           </div>
 
-          {/* Información de roles */}
-          <div className="role-info">
-            <p>
-              <strong>Accesos de prueba:</strong>
-              <br />
-              • <strong>creador@fae.ec</strong> - Crear y gestionar documentos
-              <br />
-              • <strong>firmante@fae.ec</strong> - Firmar documentos asignados
-              <br />
-              • <strong>administrador@fae.ec</strong> - Gestión del sistema
-              <br />
-              • <strong>auditor@fae.ec</strong> - Trazabilidad y reportes
-              <br />
-              <small>Los Firmantes no pueden recuperar códigos de acceso</small>
-            </p>
+          {/* Logo institucional */}
+          <div className="logo-container">
+            <img 
+              src="/assets/logo.png" 
+              alt="Logo Fuerzas Armadas del Ecuador" 
+              className="fae-logo"
+            />
           </div>
 
           {/* Mensajes de estado */}
