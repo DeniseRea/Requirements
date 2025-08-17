@@ -1,0 +1,54 @@
+version: 2
+discovery:
+  allowed-hostnames:
+    - localhost
+    - 127.0.0.1
+  network-idle-timeout: 750  # Mismo timeout que Playwright networkidle
+  
+snapshot:
+  # Exactamente los mismos viewports que Playwright
+  widths: [375, 768, 1280]  
+  min-height: 667
+  
+  # Optimización para Percy Cloud
+  enable-javascript: true
+  
+  # Mismo CSS de estabilización que Playwright
+  percy-css: |
+    /* Misma estabilización CSS que Playwright */
+    *, *::before, *::after {
+      animation-duration: 0s !important;
+      animation-delay: 0s !important;
+      transition-duration: 0s !important;
+      transition-delay: 0s !important;
+    }
+    
+    /* Ocultar elementos dinámicos para consistencia */
+    .document-date, 
+    .user-timestamp, 
+    .document-id,
+    .current-time,
+    .last-updated,
+    .timestamp,
+    .date {
+      visibility: hidden !important;
+    }
+    
+    /* Fix loading states */
+    .loading,
+    .spinner {
+      display: none !important;
+    }
+    
+    /* Estabilización adicional para Percy Cloud */
+    .btn:hover, .btn:focus {
+      transform: none !important;
+    }
+
+# Configuración específica para Percy Cloud  
+#agent:
+#  asset-discovery:
+#    network-idle-timeout: 750
+#    allowed-hostnames:
+#      - localhost
+#      - 127.0.0.1

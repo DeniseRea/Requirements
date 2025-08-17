@@ -1,0 +1,35 @@
+{
+  "loki": {
+    "configurations": {
+      "chrome.laptop": {
+        "target": "chrome.app",
+        "width": 1366,
+        "height": 768,
+        "deviceScaleFactor": 1,
+        "mobile": false
+      },
+      "chrome.tablet": {
+        "target": "chrome.app",
+        "width": 768,
+        "height": 1024,
+        "deviceScaleFactor": 2,
+        "mobile": true
+      },
+      "chrome.mobile": {
+        "target": "chrome.app",
+        "width": 375,
+        "height": 667,
+        "deviceScaleFactor": 2,
+        "mobile": true
+      }
+    },
+    "chromeSelector": "chrome",
+    "chromeDockerImage": "yukinying/chrome-headless-browser-xl:72.0.3626.121",
+    "storybookConfigDir": ".storybook",
+    "storybookStaticDir": "storybook-static",
+    "diffingEngine": "gm",
+    "threshold": 0.1,
+    "verboseRenderer": false,
+    "enableOnlyAdditions": false
+  }
+}
