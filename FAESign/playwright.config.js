@@ -1,86 +1,167 @@
 import { defineConfig, devices } from '@playwright/test';
 
 /**
- * @see https://playwright.dev/docs/test-configuration
+ * CONFIGURACIÓN OPTIMIZADA PARA AUTOMATIZACIÓN DE PRUEBAS VISUALES
+ * =================================================================
+ * 
+ * Configuración especializada para testing visual automatizado
+ * Incluye optimizaciones para detección de regresiones y CI/CD
  */
 export default defineConfig({
   testDir: './tests/visual/playwright',
   
-  /* Run tests in files in parallel */
-  fullyParallel: true,
+  /* Configuración para pruebas visuales automatizadas */
+  fullyParallel: false, // Secuencial para pruebas visuales más estables
   
-  /* Fail the build on CI if you accidentally left test.only in the source code. */
+  /* Configuración CI/CD optimizada */
   forbidOnly: !!process.env.CI,
+  retries: process.env.CI ? 3 : 1, // Más reintentos para pruebas visuales
+  workers: process.env.CI ? 1 : 2, // Reducido para estabilidad visual
   
-  /* Retry on CI only */
-  retries: process.env.CI ? 2 : 0,
+  /* Timeout extendido para pruebas visuales */
+  timeout: 60000, // 60 segundos para operaciones de screenshot
+  expect: {
+    timeout: 15000, // 15 segundos para aserciones visuales
+    toHaveScreenshot: {
+      // Configuración global para screenshots
+      threshold: 0.3,
+      mode: 'default',
+      animations: 'disabled'
+    }
+  },
   
-  /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
-  
-  /* Reporter to use. See https://playwright.dev/docs/test-reporters */
+  /* Reportes especializados para pruebas visuales */
   reporter: [
-    ['html', { outputFolder: 'playwright-report' }],
-    ['json', { outputFile: 'playwright-report/results.json' }]
+    ['html', { 
+      outputFolder: 'playwright-report',
+      open: process.env.CI ? 'never' : 'on-failure'
+    }],
+    ['json', { outputFile: 'playwright-report/visual-results.json' }],
+    ['junit', { outputFile: 'playwright-report/visual-junit.xml' }],
+    ['line'] // Para logs detallados durante automatización
   ],
   
-  /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+  /* Configuración base optimizada para pruebas visuales */
   use: {
-    /* Base URL to use in actions like `await page.goto('/')`. */
     baseURL: 'http://localhost:5173',
     
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    /* Configuración de trace optimizada para debugging visual */
+    trace: 'retain-on-failure',
     
-    /* Take screenshot on failure */
+    /* Screenshots para todas las fallas */
     screenshot: 'only-on-failure',
     
-    /* Record video on failure */
+    /* Video solo en fallas para análisis posterior */
     video: 'retain-on-failure',
     
-    /* Wait for network to be idle */
-    waitForLoadState: 'networkidle'
+    /* Configuraciones para estabilidad visual */
+    waitForLoadState: 'networkidle',
+    
+    /* Configuraciones adicionales para pruebas visuales */
+    actionTimeout: 10000,
+    navigationTimeout: 30000,
+    
+    /* Configuración de viewport por defecto */
+    viewport: { width: 1280, height: 720 },
+    
+    /* Configuraciones de calidad para screenshots */
+    launchOptions: {
+      args: [
+        '--disable-web-security',
+        '--disable-dev-shm-usage',
+        '--no-sandbox',
+        '--disable-gpu',
+        '--disable-background-networking',
+        '--disable-background-timer-throttling',
+        '--disable-renderer-backgrounding',
+        '--disable-backgrounding-occluded-windows'
+      ]
+    }
   },
 
-  /* Configure projects for major browsers */
+  /* Proyectos optimizados para automatización visual cross-browser */
   projects: [
     {
-      name: 'chromium',
+      name: 'chromium-visual',
+      use: { 
+        ...devices['Desktop Chrome'],
+        viewport: { width: 1280, height: 720 }
+      },
+      testMatch: '**/automated-visual-suite.spec.js'
+    },
+    {
+      name: 'firefox-visual',
+      use: { 
+        ...devices['Desktop Firefox'],
+        viewport: { width: 1280, height: 720 }
+      },
+      testMatch: '**/automated-visual-suite.spec.js'
+    },
+    {
+      name: 'webkit-visual',
+      use: { 
+        ...devices['Desktop Safari'],
+        viewport: { width: 1280, height: 720 }
+      },
+      testMatch: '**/automated-visual-suite.spec.js'
+    },
+    
+    /* Proyecto específico para pruebas responsivas automatizadas */
+    {
+      name: 'responsive-mobile',
+      use: { 
+        ...devices['iPhone 13'],
+        viewport: { width: 375, height: 667 }
+      },
+      testMatch: '**/automated-visual-suite.spec.js'
+    },
+    {
+      name: 'responsive-tablet',
+      use: { 
+        ...devices['iPad'],
+        viewport: { width: 768, height: 1024 }
+      },
+      testMatch: '**/automated-visual-suite.spec.js'
+    },
+    
+    /* Proyecto para pruebas legacy (compatibilidad) */
+    {
+      name: 'legacy-tests',
       use: { ...devices['Desktop Chrome'] },
-    },
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
+      testMatch: '**/statusmessage-exact.spec.js'
     },
     
-    /* Test against mobile viewports. */
+    /* Proyecto para automatización de aplicación real */
     {
-      name: 'Mobile Chrome',
-      use: { ...devices['Pixel 5'] },
+      name: 'real-app-chromium',
+      use: { 
+        ...devices['Desktop Chrome'],
+        viewport: { width: 1280, height: 720 }
+      },
+      testMatch: ['**/basic.spec.js', '**/automated-faesign-real-app.spec.js', '**/real-app-*.spec.js', '**/faesign-working-automation.spec.js']
     },
     {
-      name: 'Mobile Safari',
-      use: { ...devices['iPhone 12'] },
+      name: 'real-app-firefox',
+      use: { 
+        ...devices['Desktop Firefox'],
+        viewport: { width: 1280, height: 720 }
+      },
+      testMatch: ['**/basic.spec.js', '**/automated-faesign-real-app.spec.js', '**/real-app-*.spec.js']
     },
-    
-    /* Test against tablet viewports. */
     {
-      name: 'tablet',
-      use: { ...devices['iPad Pro'] },
-    },
+      name: 'real-app-mobile',
+      use: { 
+        ...devices['iPhone 13'],
+        viewport: { width: 375, height: 667 }
+      },
+      testMatch: ['**/basic.spec.js', '**/automated-faesign-real-app.spec.js', '**/real-app-*.spec.js']
+    }
   ],
 
-  /* Run your local dev server before starting the tests */
-  /* Commented temporarily - using existing server on localhost:5173
+  /* Configuración del servidor web local */
   webServer: {
     command: 'npm run dev',
-    url: 'http://localhost:5174',
+    port: 5173,
     reuseExistingServer: !process.env.CI,
-    timeout: 120 * 1000,
   },
-  */
 });

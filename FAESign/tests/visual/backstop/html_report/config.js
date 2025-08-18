@@ -1,0 +1,511 @@
+report({
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_multiserver_testing_Frontend_-_Homepage_0_body_0_mobile.png",
+        "test": "..\\test\\20250817-121736\\FAESign_multiserver_testing_Frontend_-_Homepage_0_body_0_mobile.png",
+        "selector": "body",
+        "fileName": "FAESign_multiserver_testing_Frontend_-_Homepage_0_body_0_mobile.png",
+        "label": "Frontend - Homepage",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 1,
+        "url": "http://localhost:5173/",
+        "expect": 0,
+        "viewportLabel": "mobile",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.1699150424787606,
+          "misMatchPercentage": "0.17",
+          "analysisTime": 176
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_multiserver_testing_Frontend_-_Homepage_0_body_1_tablet.png",
+        "test": "..\\test\\20250817-121736\\FAESign_multiserver_testing_Frontend_-_Homepage_0_body_1_tablet.png",
+        "selector": "body",
+        "fileName": "FAESign_multiserver_testing_Frontend_-_Homepage_0_body_1_tablet.png",
+        "label": "Frontend - Homepage",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 1,
+        "url": "http://localhost:5173/",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 33.488591512044266,
+          "misMatchPercentage": "33.49",
+          "analysisTime": 351
+        },
+        "diffImage": "..\\test\\20250817-121736\\failed_diff_FAESign_multiserver_testing_Frontend_-_Homepage_0_body_1_tablet.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_multiserver_testing_Frontend_-_Homepage_0_body_2_desktop.png",
+        "test": "..\\test\\20250817-121736\\FAESign_multiserver_testing_Frontend_-_Homepage_0_body_2_desktop.png",
+        "selector": "body",
+        "fileName": "FAESign_multiserver_testing_Frontend_-_Homepage_0_body_2_desktop.png",
+        "label": "Frontend - Homepage",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 1,
+        "url": "http://localhost:5173/",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 27.51638454861111,
+          "misMatchPercentage": "27.52",
+          "analysisTime": 453
+        },
+        "diffImage": "..\\test\\20250817-121736\\failed_diff_FAESign_multiserver_testing_Frontend_-_Homepage_0_body_2_desktop.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_multiserver_testing_Frontend_-_Login_0_body_0_mobile.png",
+        "test": "..\\test\\20250817-121736\\FAESign_multiserver_testing_Frontend_-_Login_0_body_0_mobile.png",
+        "selector": "body",
+        "fileName": "FAESign_multiserver_testing_Frontend_-_Login_0_body_0_mobile.png",
+        "label": "Frontend - Login",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 1,
+        "url": "http://localhost:5173/#/login",
+        "expect": 0,
+        "viewportLabel": "mobile",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 26.634682658670666,
+          "misMatchPercentage": "26.63",
+          "analysisTime": 350
+        },
+        "diffImage": "..\\test\\20250817-121736\\failed_diff_FAESign_multiserver_testing_Frontend_-_Login_0_body_0_mobile.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_multiserver_testing_Frontend_-_Login_0_body_1_tablet.png",
+        "test": "..\\test\\20250817-121736\\FAESign_multiserver_testing_Frontend_-_Login_0_body_1_tablet.png",
+        "selector": "body",
+        "fileName": "FAESign_multiserver_testing_Frontend_-_Login_0_body_1_tablet.png",
+        "label": "Frontend - Login",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 1,
+        "url": "http://localhost:5173/#/login",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 37.634404500325516,
+          "misMatchPercentage": "37.63",
+          "analysisTime": 543
+        },
+        "diffImage": "..\\test\\20250817-121736\\failed_diff_FAESign_multiserver_testing_Frontend_-_Login_0_body_1_tablet.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_multiserver_testing_Frontend_-_Login_0_body_2_desktop.png",
+        "test": "..\\test\\20250817-121736\\FAESign_multiserver_testing_Frontend_-_Login_0_body_2_desktop.png",
+        "selector": "body",
+        "fileName": "FAESign_multiserver_testing_Frontend_-_Login_0_body_2_desktop.png",
+        "label": "Frontend - Login",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 1,
+        "url": "http://localhost:5173/#/login",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_multiserver_testing_Frontend_-_Dashboard_0_body_0_mobile.png",
+        "test": "..\\test\\20250817-121736\\FAESign_multiserver_testing_Frontend_-_Dashboard_0_body_0_mobile.png",
+        "selector": "body",
+        "fileName": "FAESign_multiserver_testing_Frontend_-_Dashboard_0_body_0_mobile.png",
+        "label": "Frontend - Dashboard",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 1,
+        "url": "http://localhost:5173/#/dashboard",
+        "expect": 0,
+        "viewportLabel": "mobile",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 28.22388805597201,
+          "misMatchPercentage": "28.22",
+          "analysisTime": 219
+        },
+        "diffImage": "..\\test\\20250817-121736\\failed_diff_FAESign_multiserver_testing_Frontend_-_Dashboard_0_body_0_mobile.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_multiserver_testing_Frontend_-_Dashboard_0_body_1_tablet.png",
+        "test": "..\\test\\20250817-121736\\FAESign_multiserver_testing_Frontend_-_Dashboard_0_body_1_tablet.png",
+        "selector": "body",
+        "fileName": "FAESign_multiserver_testing_Frontend_-_Dashboard_0_body_1_tablet.png",
+        "label": "Frontend - Dashboard",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 1,
+        "url": "http://localhost:5173/#/dashboard",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 40.536371866861984,
+          "misMatchPercentage": "40.54",
+          "analysisTime": 551
+        },
+        "diffImage": "..\\test\\20250817-121736\\failed_diff_FAESign_multiserver_testing_Frontend_-_Dashboard_0_body_1_tablet.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_multiserver_testing_Frontend_-_Dashboard_0_body_2_desktop.png",
+        "test": "..\\test\\20250817-121736\\FAESign_multiserver_testing_Frontend_-_Dashboard_0_body_2_desktop.png",
+        "selector": "body",
+        "fileName": "FAESign_multiserver_testing_Frontend_-_Dashboard_0_body_2_desktop.png",
+        "label": "Frontend - Dashboard",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 1,
+        "url": "http://localhost:5173/#/dashboard",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0,
+          "misMatchPercentage": "0.00",
+          "analysisTime": 226
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_multiserver_testing_Storybook_-_StatusMessage_Success_0_body_0_mobile.png",
+        "test": "..\\test\\20250817-121736\\FAESign_multiserver_testing_Storybook_-_StatusMessage_Success_0_body_0_mobile.png",
+        "selector": "body",
+        "fileName": "FAESign_multiserver_testing_Storybook_-_StatusMessage_Success_0_body_0_mobile.png",
+        "label": "Storybook - StatusMessage Success",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 0.5,
+        "url": "http://localhost:6006/iframe.html?args=&id=shared-statusmessage--success",
+        "expect": 0,
+        "viewportLabel": "mobile",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_multiserver_testing_Storybook_-_StatusMessage_Success_0_body_1_tablet.png",
+        "test": "..\\test\\20250817-121736\\FAESign_multiserver_testing_Storybook_-_StatusMessage_Success_0_body_1_tablet.png",
+        "selector": "body",
+        "fileName": "FAESign_multiserver_testing_Storybook_-_StatusMessage_Success_0_body_1_tablet.png",
+        "label": "Storybook - StatusMessage Success",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 0.5,
+        "url": "http://localhost:6006/iframe.html?args=&id=shared-statusmessage--success",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_multiserver_testing_Storybook_-_StatusMessage_Success_0_body_2_desktop.png",
+        "test": "..\\test\\20250817-121736\\FAESign_multiserver_testing_Storybook_-_StatusMessage_Success_0_body_2_desktop.png",
+        "selector": "body",
+        "fileName": "FAESign_multiserver_testing_Storybook_-_StatusMessage_Success_0_body_2_desktop.png",
+        "label": "Storybook - StatusMessage Success",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 0.5,
+        "url": "http://localhost:6006/iframe.html?args=&id=shared-statusmessage--success",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_multiserver_testing_Storybook_-_StatusMessage_Error_0_body_0_mobile.png",
+        "test": "..\\test\\20250817-121736\\FAESign_multiserver_testing_Storybook_-_StatusMessage_Error_0_body_0_mobile.png",
+        "selector": "body",
+        "fileName": "FAESign_multiserver_testing_Storybook_-_StatusMessage_Error_0_body_0_mobile.png",
+        "label": "Storybook - StatusMessage Error",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 0.5,
+        "url": "http://localhost:6006/iframe.html?args=&id=shared-statusmessage--error",
+        "expect": 0,
+        "viewportLabel": "mobile",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_multiserver_testing_Storybook_-_StatusMessage_Error_0_body_1_tablet.png",
+        "test": "..\\test\\20250817-121736\\FAESign_multiserver_testing_Storybook_-_StatusMessage_Error_0_body_1_tablet.png",
+        "selector": "body",
+        "fileName": "FAESign_multiserver_testing_Storybook_-_StatusMessage_Error_0_body_1_tablet.png",
+        "label": "Storybook - StatusMessage Error",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 0.5,
+        "url": "http://localhost:6006/iframe.html?args=&id=shared-statusmessage--error",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_multiserver_testing_Storybook_-_StatusMessage_Error_0_body_2_desktop.png",
+        "test": "..\\test\\20250817-121736\\FAESign_multiserver_testing_Storybook_-_StatusMessage_Error_0_body_2_desktop.png",
+        "selector": "body",
+        "fileName": "FAESign_multiserver_testing_Storybook_-_StatusMessage_Error_0_body_2_desktop.png",
+        "label": "Storybook - StatusMessage Error",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 0.5,
+        "url": "http://localhost:6006/iframe.html?args=&id=shared-statusmessage--error",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_multiserver_testing_Storybook_-_StatusMessage_Warning_0_body_0_mobile.png",
+        "test": "..\\test\\20250817-121736\\FAESign_multiserver_testing_Storybook_-_StatusMessage_Warning_0_body_0_mobile.png",
+        "selector": "body",
+        "fileName": "FAESign_multiserver_testing_Storybook_-_StatusMessage_Warning_0_body_0_mobile.png",
+        "label": "Storybook - StatusMessage Warning",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 0.5,
+        "url": "http://localhost:6006/iframe.html?args=&id=shared-statusmessage--warning",
+        "expect": 0,
+        "viewportLabel": "mobile",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_multiserver_testing_Storybook_-_StatusMessage_Warning_0_body_1_tablet.png",
+        "test": "..\\test\\20250817-121736\\FAESign_multiserver_testing_Storybook_-_StatusMessage_Warning_0_body_1_tablet.png",
+        "selector": "body",
+        "fileName": "FAESign_multiserver_testing_Storybook_-_StatusMessage_Warning_0_body_1_tablet.png",
+        "label": "Storybook - StatusMessage Warning",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 0.5,
+        "url": "http://localhost:6006/iframe.html?args=&id=shared-statusmessage--warning",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_multiserver_testing_Storybook_-_StatusMessage_Warning_0_body_2_desktop.png",
+        "test": "..\\test\\20250817-121736\\FAESign_multiserver_testing_Storybook_-_StatusMessage_Warning_0_body_2_desktop.png",
+        "selector": "body",
+        "fileName": "FAESign_multiserver_testing_Storybook_-_StatusMessage_Warning_0_body_2_desktop.png",
+        "label": "Storybook - StatusMessage Warning",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 0.5,
+        "url": "http://localhost:6006/iframe.html?args=&id=shared-statusmessage--warning",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_multiserver_testing_Static_-_StatusMessage_Test_0_container_0_mobile.png",
+        "test": "..\\test\\20250817-121736\\FAESign_multiserver_testing_Static_-_StatusMessage_Test_0_container_0_mobile.png",
+        "selector": ".container",
+        "fileName": "FAESign_multiserver_testing_Static_-_StatusMessage_Test_0_container_0_mobile.png",
+        "label": "Static - StatusMessage Test",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 0.3,
+        "url": "file:///C:/Users/denise/Documents/GitHub/Requirements/FAESign/tests/visual/backstop/test-pages/statusmessage.html",
+        "expect": 0,
+        "viewportLabel": "mobile",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_multiserver_testing_Static_-_StatusMessage_Test_0_container_1_tablet.png",
+        "test": "..\\test\\20250817-121736\\FAESign_multiserver_testing_Static_-_StatusMessage_Test_0_container_1_tablet.png",
+        "selector": ".container",
+        "fileName": "FAESign_multiserver_testing_Static_-_StatusMessage_Test_0_container_1_tablet.png",
+        "label": "Static - StatusMessage Test",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 0.3,
+        "url": "file:///C:/Users/denise/Documents/GitHub/Requirements/FAESign/tests/visual/backstop/test-pages/statusmessage.html",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_multiserver_testing_Static_-_StatusMessage_Test_0_container_2_desktop.png",
+        "test": "..\\test\\20250817-121736\\FAESign_multiserver_testing_Static_-_StatusMessage_Test_0_container_2_desktop.png",
+        "selector": ".container",
+        "fileName": "FAESign_multiserver_testing_Static_-_StatusMessage_Test_0_container_2_desktop.png",
+        "label": "Static - StatusMessage Test",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 0.3,
+        "url": "file:///C:/Users/denise/Documents/GitHub/Requirements/FAESign/tests/visual/backstop/test-pages/statusmessage.html",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    }
+  ],
+  "id": "FAESign_multiserver_testing"
+});

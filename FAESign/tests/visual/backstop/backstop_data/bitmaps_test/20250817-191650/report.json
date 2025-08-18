@@ -1,0 +1,54 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\FAESign_visual_tests_staging_Static-StatusMessage-TestPage_0_container_0_phone.png",
+        "test": "..\\bitmaps_test\\20250817-191650\\FAESign_visual_tests_staging_Static-StatusMessage-TestPage_0_container_0_phone.png",
+        "selector": ".container",
+        "fileName": "FAESign_visual_tests_staging_Static-StatusMessage-TestPage_0_container_0_phone.png",
+        "label": "Static-StatusMessage-TestPage",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 0.3,
+        "url": "file:///C:/Users/denise/Documents/GitHub/Requirements/FAESign/tests/visual/backstop/test-pages/statusmessage.html",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "error": "Reference file not found C:\\Users\\denise\\Documents\\GitHub\\Requirements\\FAESign\\tests\\visual\\backstop\\backstop_data\\bitmaps_reference\\FAESign_visual_tests_staging_Static-StatusMessage-TestPage_0_container_0_phone.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\FAESign_visual_tests_staging_Static-StatusMessage-TestPage_0_container_1_tablet.png",
+        "test": "..\\bitmaps_test\\20250817-191650\\FAESign_visual_tests_staging_Static-StatusMessage-TestPage_0_container_1_tablet.png",
+        "selector": ".container",
+        "fileName": "FAESign_visual_tests_staging_Static-StatusMessage-TestPage_0_container_1_tablet.png",
+        "label": "Static-StatusMessage-TestPage",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 0.3,
+        "url": "file:///C:/Users/denise/Documents/GitHub/Requirements/FAESign/tests/visual/backstop/test-pages/statusmessage.html",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "error": "Reference file not found C:\\Users\\denise\\Documents\\GitHub\\Requirements\\FAESign\\tests\\visual\\backstop\\backstop_data\\bitmaps_reference\\FAESign_visual_tests_staging_Static-StatusMessage-TestPage_0_container_1_tablet.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\FAESign_visual_tests_staging_Static-StatusMessage-TestPage_0_container_2_desktop.png",
+        "test": "..\\bitmaps_test\\20250817-191650\\FAESign_visual_tests_staging_Static-StatusMessage-TestPage_0_container_2_desktop.png",
+        "selector": ".container",
+        "fileName": "FAESign_visual_tests_staging_Static-StatusMessage-TestPage_0_container_2_desktop.png",
+        "label": "Static-StatusMessage-TestPage",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 0.3,
+        "url": "file:///C:/Users/denise/Documents/GitHub/Requirements/FAESign/tests/visual/backstop/test-pages/statusmessage.html",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "error": "Reference file not found C:\\Users\\denise\\Documents\\GitHub\\Requirements\\FAESign\\tests\\visual\\backstop\\backstop_data\\bitmaps_reference\\FAESign_visual_tests_staging_Static-StatusMessage-TestPage_0_container_2_desktop.png"
+      },
+      "status": "fail"
+    }
+  ],
+  "id": "FAESign_visual_tests_staging"
+}

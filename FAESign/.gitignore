@@ -3,12 +3,26 @@
 /.pnp
 .pnp.js
 
-# Entorno
+# Entorno y SECRETS (CRÍTICO - NO COMMITEAR)
 .env.local
 .env.development
 .env.test
 .env.production
 .env
+.env.*
+*.env
+
+# Percy tokens y configuración (SECRETS)
+.percy.yml
+percy.yml
+.env.percy
+
+# API Keys y tokens (SECRETS)
+config/secrets.json
+config/credentials.json
+*.key
+*.pem
+auth.json
 
 # Logs y caché
 npm-debug.log*

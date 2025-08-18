@@ -1,0 +1,231 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_visual_testing_StatusMessage_Success_0_body_0_mobile.png",
+        "test": "..\\test\\20250816-231229\\FAESign_visual_testing_StatusMessage_Success_0_body_0_mobile.png",
+        "selector": "body",
+        "fileName": "FAESign_visual_testing_StatusMessage_Success_0_body_0_mobile.png",
+        "label": "StatusMessage Success",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.3,
+        "url": "http://localhost:6006/iframe.html?args=&id=shared-statusmessage--success",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "mobile",
+        "engineErrorMsg": "net::ERR_CONNECTION_REFUSED at http://localhost:6006/iframe.html?args=&id=shared-statusmessage--success",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_visual_testing_StatusMessage_Success_0_body_1_tablet.png",
+        "test": "..\\test\\20250816-231229\\FAESign_visual_testing_StatusMessage_Success_0_body_1_tablet.png",
+        "selector": "body",
+        "fileName": "FAESign_visual_testing_StatusMessage_Success_0_body_1_tablet.png",
+        "label": "StatusMessage Success",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.3,
+        "url": "http://localhost:6006/iframe.html?args=&id=shared-statusmessage--success",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "engineErrorMsg": "net::ERR_CONNECTION_REFUSED at http://localhost:6006/iframe.html?args=&id=shared-statusmessage--success",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_visual_testing_StatusMessage_Success_0_body_2_desktop.png",
+        "test": "..\\test\\20250816-231229\\FAESign_visual_testing_StatusMessage_Success_0_body_2_desktop.png",
+        "selector": "body",
+        "fileName": "FAESign_visual_testing_StatusMessage_Success_0_body_2_desktop.png",
+        "label": "StatusMessage Success",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.3,
+        "url": "http://localhost:6006/iframe.html?args=&id=shared-statusmessage--success",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "engineErrorMsg": "net::ERR_CONNECTION_REFUSED at http://localhost:6006/iframe.html?args=&id=shared-statusmessage--success",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_visual_testing_StatusMessage_Error_0_body_0_mobile.png",
+        "test": "..\\test\\20250816-231229\\FAESign_visual_testing_StatusMessage_Error_0_body_0_mobile.png",
+        "selector": "body",
+        "fileName": "FAESign_visual_testing_StatusMessage_Error_0_body_0_mobile.png",
+        "label": "StatusMessage Error",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.3,
+        "url": "http://localhost:6006/iframe.html?args=&id=shared-statusmessage--error",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "mobile",
+        "engineErrorMsg": "net::ERR_CONNECTION_REFUSED at http://localhost:6006/iframe.html?args=&id=shared-statusmessage--error",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_visual_testing_StatusMessage_Error_0_body_1_tablet.png",
+        "test": "..\\test\\20250816-231229\\FAESign_visual_testing_StatusMessage_Error_0_body_1_tablet.png",
+        "selector": "body",
+        "fileName": "FAESign_visual_testing_StatusMessage_Error_0_body_1_tablet.png",
+        "label": "StatusMessage Error",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.3,
+        "url": "http://localhost:6006/iframe.html?args=&id=shared-statusmessage--error",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "engineErrorMsg": "net::ERR_CONNECTION_REFUSED at http://localhost:6006/iframe.html?args=&id=shared-statusmessage--error",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_visual_testing_StatusMessage_Error_0_body_2_desktop.png",
+        "test": "..\\test\\20250816-231229\\FAESign_visual_testing_StatusMessage_Error_0_body_2_desktop.png",
+        "selector": "body",
+        "fileName": "FAESign_visual_testing_StatusMessage_Error_0_body_2_desktop.png",
+        "label": "StatusMessage Error",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.3,
+        "url": "http://localhost:6006/iframe.html?args=&id=shared-statusmessage--error",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "engineErrorMsg": "net::ERR_CONNECTION_REFUSED at http://localhost:6006/iframe.html?args=&id=shared-statusmessage--error",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_visual_testing_StatusMessage_Warning_0_body_0_mobile.png",
+        "test": "..\\test\\20250816-231229\\FAESign_visual_testing_StatusMessage_Warning_0_body_0_mobile.png",
+        "selector": "body",
+        "fileName": "FAESign_visual_testing_StatusMessage_Warning_0_body_0_mobile.png",
+        "label": "StatusMessage Warning",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.3,
+        "url": "http://localhost:6006/iframe.html?args=&id=shared-statusmessage--warning",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "mobile",
+        "engineErrorMsg": "net::ERR_CONNECTION_REFUSED at http://localhost:6006/iframe.html?args=&id=shared-statusmessage--warning",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_visual_testing_StatusMessage_Warning_0_body_1_tablet.png",
+        "test": "..\\test\\20250816-231229\\FAESign_visual_testing_StatusMessage_Warning_0_body_1_tablet.png",
+        "selector": "body",
+        "fileName": "FAESign_visual_testing_StatusMessage_Warning_0_body_1_tablet.png",
+        "label": "StatusMessage Warning",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.3,
+        "url": "http://localhost:6006/iframe.html?args=&id=shared-statusmessage--warning",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "engineErrorMsg": "net::ERR_CONNECTION_REFUSED at http://localhost:6006/iframe.html?args=&id=shared-statusmessage--warning",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_visual_testing_StatusMessage_Warning_0_body_2_desktop.png",
+        "test": "..\\test\\20250816-231229\\FAESign_visual_testing_StatusMessage_Warning_0_body_2_desktop.png",
+        "selector": "body",
+        "fileName": "FAESign_visual_testing_StatusMessage_Warning_0_body_2_desktop.png",
+        "label": "StatusMessage Warning",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.3,
+        "url": "http://localhost:6006/iframe.html?args=&id=shared-statusmessage--warning",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "engineErrorMsg": "net::ERR_CONNECTION_REFUSED at http://localhost:6006/iframe.html?args=&id=shared-statusmessage--warning",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    }
+  ],
+  "id": "FAESign_visual_testing"
+}

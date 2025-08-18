@@ -1,0 +1,84 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_visual_testing_TestComponent_Default_0_body_0_mobile.png",
+        "test": "..\\test\\20250817-091526\\FAESign_visual_testing_TestComponent_Default_0_body_0_mobile.png",
+        "selector": "body",
+        "fileName": "FAESign_visual_testing_TestComponent_Default_0_body_0_mobile.png",
+        "label": "TestComponent Default",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.3,
+        "url": "http://localhost:6006/iframe.html?id=test-testcomponent--default",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "mobile",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_visual_testing_TestComponent_Default_0_body_1_tablet.png",
+        "test": "..\\test\\20250817-091526\\FAESign_visual_testing_TestComponent_Default_0_body_1_tablet.png",
+        "selector": "body",
+        "fileName": "FAESign_visual_testing_TestComponent_Default_0_body_1_tablet.png",
+        "label": "TestComponent Default",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.3,
+        "url": "http://localhost:6006/iframe.html?id=test-testcomponent--default",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 1.2914021809895835,
+          "misMatchPercentage": "1.29",
+          "analysisTime": 84
+        },
+        "diffImage": "..\\test\\20250817-091526\\failed_diff_FAESign_visual_testing_TestComponent_Default_0_body_1_tablet.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\reference\\FAESign_visual_testing_TestComponent_Default_0_body_2_desktop.png",
+        "test": "..\\test\\20250817-091526\\FAESign_visual_testing_TestComponent_Default_0_body_2_desktop.png",
+        "selector": "body",
+        "fileName": "FAESign_visual_testing_TestComponent_Default_0_body_2_desktop.png",
+        "label": "TestComponent Default",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.3,
+        "url": "http://localhost:6006/iframe.html?id=test-testcomponent--default",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 1.4599609375,
+          "misMatchPercentage": "1.46",
+          "analysisTime": 123
+        },
+        "diffImage": "..\\test\\20250817-091526\\failed_diff_FAESign_visual_testing_TestComponent_Default_0_body_2_desktop.png"
+      },
+      "status": "fail"
+    }
+  ],
+  "id": "FAESign_visual_testing"
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="21" failures="6" errors="6" skipped="0">
+  <testsuite name="BackstopJS" tests="21" failures="6" errors="6" skipped="0">
+    <testcase classname="body" name=" ›› Frontend - Homepage"/>
+    <testcase classname="body" name=" ›› Frontend - Homepage">
+      <failure message="Design deviation ›› Frontend - Homepage (body) component"/>
+      <error message="Design deviation ›› Frontend - Homepage (body) component"/>
+    </testcase>
+    <testcase classname="body" name=" ›› Frontend - Homepage">
+      <failure message="Design deviation ›› Frontend - Homepage (body) component"/>
+      <error message="Design deviation ›› Frontend - Homepage (body) component"/>
+    </testcase>
+    <testcase classname="body" name=" ›› Frontend - Login">
+      <failure message="Design deviation ›› Frontend - Login (body) component"/>
+      <error message="Design deviation ›› Frontend - Login (body) component"/>
+    </testcase>
+    <testcase classname="body" name=" ›› Frontend - Login">
+      <failure message="Design deviation ›› Frontend - Login (body) component"/>
+      <error message="Design deviation ›› Frontend - Login (body) component"/>
+    </testcase>
+    <testcase classname="body" name=" ›› Frontend - Login"/>
+    <testcase classname="body" name=" ›› Frontend - Dashboard">
+      <failure message="Design deviation ›› Frontend - Dashboard (body) component"/>
+      <error message="Design deviation ›› Frontend - Dashboard (body) component"/>
+    </testcase>
+    <testcase classname="body" name=" ›› Frontend - Dashboard">
+      <failure message="Design deviation ›› Frontend - Dashboard (body) component"/>
+      <error message="Design deviation ›› Frontend - Dashboard (body) component"/>
+    </testcase>
+    <testcase classname="body" name=" ›› Frontend - Dashboard"/>
+    <testcase classname="body" name=" ›› Storybook - StatusMessage Success"/>
+    <testcase classname="body" name=" ›› Storybook - StatusMessage Success"/>
+    <testcase classname="body" name=" ›› Storybook - StatusMessage Success"/>
+    <testcase classname="body" name=" ›› Storybook - StatusMessage Error"/>
+    <testcase classname="body" name=" ›› Storybook - StatusMessage Error"/>
+    <testcase classname="body" name=" ›› Storybook - StatusMessage Error"/>
+    <testcase classname="body" name=" ›› Storybook - StatusMessage Warning"/>
+    <testcase classname="body" name=" ›› Storybook - StatusMessage Warning"/>
+    <testcase classname="body" name=" ›› Storybook - StatusMessage Warning"/>
+    <testcase classname=".container" name=" ›› Static - StatusMessage Test"/>
+    <testcase classname=".container" name=" ›› Static - StatusMessage Test"/>
+    <testcase classname=".container" name=" ›› Static - StatusMessage Test"/>
+  </testsuite>
+</testsuites>
