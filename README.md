@@ -7,7 +7,7 @@
 
 FAESign es una aplicación web moderna diseñada para la gestión integral de procesos de firma electrónica avanzada, garantizando máxima trazabilidad, seguridad y eficiencia operativa. El sistema está estructurado en roles específicos, cada uno con funcionalidades y responsabilidades claramente definidas según las mejores prácticas de seguridad digital.
 
-## 🚀 Características Principales
+##  Características Principales
 
 ### **Sistema de Roles Diferenciados**
 
@@ -44,7 +44,7 @@ Encargado de la trazabilidad, inspección y legalidad del sistema.
 - Analizar métricas y tiempos de proceso
 - Verificar cumplimiento normativo y legal
 
-## 📂 Arquitectura del Proyecto
+##  Arquitectura del Proyecto
 
 ```
 FAESign/
@@ -116,7 +116,7 @@ FAESign/
    http://localhost:5173
    ```
 
-## 🔐 Sistema de Autenticación
+## Sistema de Autenticación
 
 ### **Flujo de Autenticación FAE**
 1. **Login**: Correo electrónico + código de acceso (no contraseña tradicional)
@@ -134,7 +134,7 @@ Auditor:       auditor@fae.ec       | Código: cualquiera
 ```
 
 
-## 🧪 Scripts Disponibles
+## Scripts Disponibles
 
 ```bash
 # Desarrollo
@@ -163,7 +163,7 @@ npm run clean        # Limpia archivos de build
 - **Acción**: Descripción detallada del evento
 - **Resultado**: Éxito o fallo con detalles
 
-## 🤝 Contribuciones
+## Contribuciones
 
 ¡Las contribuciones son bienvenidas! Por favor, sigue estos pasos:
 
@@ -179,7 +179,6 @@ Este proyecto está licenciado bajo la Licencia MIT. Ver el archivo [LICENSE](LI
 
 
 <div align="center">
-  <strong>Desarrollado con ❤️ para la gestión segura de firma electrónica avanzada</strong>
   <br>
   <sub>FAESign © 2025 - Todos los derechos reservados</sub>
 </div>
